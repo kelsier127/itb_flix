@@ -40,7 +40,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'NavComponent',
   props: {
     msg: String
   }
