@@ -40,9 +40,9 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'NavComponent',
   props: {
-    msg: String
+    img: URL
   }
 }
 </script>
@@ -60,7 +60,9 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
+nav{
+  border-color:  100px solid black  ;
   color: #42b983;
+  transition: 0.2ms;
 }
 </style>

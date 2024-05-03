@@ -1,15 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="./assets/delorean.jpeg">
+  <Nav/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Nav from './components/Nav.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Nav
   }
 }
 </script>
@@ -20,7 +20,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #1b71c6;
   margin-top: 60px;
 }
-</style>
+img{
+  width: 150px;
+  height: 150px;
+}
+</style>./components/Nav.vue
