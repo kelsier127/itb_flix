@@ -1,12 +1,13 @@
   <template>
     <div class="hello">
-      
+      <h1>ITB FLIX</h1>
+
       <nav>
   
-        <a href="index.html">Index</a> | 
-        <a href="detalle.html">Detalle</a> | 
-        <a href="peliculas.html">Peliculas</a> | 
-        <a href="forms.html">Form</a>
+        <router-link to="/">Index</router-link> | 
+        <router-link to='/pelicula'>Detalle</router-link> | 
+        <router-link to='/series'>Series</router-link> | 
+        <router-link to='/login'>Form</router-link>
   
       </nav>
       
