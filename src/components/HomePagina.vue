@@ -4,8 +4,17 @@
     
     <NavComponent/>
 
-    <peliculaArticle poster=this.peliculas[0][poster]  titol=this.peliculas[0][title] rating="10" />
-    
+    <div class="divPeliculas">
+        <peliculaArticle v-for="(peli,index) in peliculas"
+        :key="index"
+        :imgUrl="peli.poster"
+        :titol="peli.title"
+        :releaseYear="peli.releaseYear"
+        :id="peli.id"
+        />
+
+    </div>
+        
 </template>
     
 <script>
@@ -34,15 +43,16 @@
                         title: peli.Title,
                         releaseYear: peli.Year,
                         type: peli.Type,
-                        poster: peli.Poster
-                        
+                        poster: peli.Poster,
+                        id: `http://www.omdbapi.com/?apikey=d148e2fd&i=${peli.imdbID}`
                     }))
                     console.log(this.peliculas)
                 }
             })
 
 
-        }}
+        }
+    }
 
         
 

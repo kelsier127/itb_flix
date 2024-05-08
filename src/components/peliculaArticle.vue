@@ -1,9 +1,10 @@
 <template>
 
     <article class="articleTal">
-        <b><p>{{ titol }}</p></b>
-        <img class="posterPelicula" :src=poster>
-        <p>Rating: <b>{{ rating }}</b>/10</p><br>
+        <b><router-link to='/pelicula'>{{ titol }}</router-link></b><br>
+        <img class="posterPelicula" :src=imgUrl >
+        <p>Release Date: <b>{{ releaseYear }}</b></p><br>
+        <p>{{ id }}</p>
         
     </article>
 
@@ -15,9 +16,10 @@
     export default{
         name: 'peliculaArticle',
         props: {
-            poster: String,
+            imgUrl: String,
             titol: String,
-            rating: String
+            releaseYear: String,
+            id: String
         }
     }
     
