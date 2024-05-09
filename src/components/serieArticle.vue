@@ -14,7 +14,7 @@
     //import axios from "axios"
 
     export default{
-        name: 'peliculaArticle',
+        name: 'serieArticle',
         props: {
             imgUrl: String,
             titol: String,

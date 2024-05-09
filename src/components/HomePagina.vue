@@ -12,7 +12,16 @@
         :releaseYear="peli.releaseYear"
         :id="peli.id"
         />
+    </div>
 
+    <div class="divPeliculas">
+        <serieArticle v-for="(serie,index) in series"
+        :key="index"
+        :imgUrl="serie.poster"
+        :titol="serie.title"
+        :releaseYear="serie.releaseYear"
+        :id="serie.id"
+        />
     </div>
         
 </template>
@@ -20,18 +29,21 @@
 <script>
     import NavComponent from './Nav.vue'
     import peliculaArticle from "./peliculaArticle"
+    import serieArticle from "./serieArticle"
     import axios from "axios"
     
     export default {
         name: 'HomePagina',
         components: {
             NavComponent,
-            peliculaArticle
+            peliculaArticle,
+            serieArticle
         },
         data(){
             return {
                 info:null,
-                peliculas: []
+                peliculas: [],
+                series: []
             }
         },
         mounted(){
@@ -44,13 +56,26 @@
                         releaseYear: peli.Year,
                         type: peli.Type,
                         poster: peli.Poster,
-                        id: `http://www.omdbapi.com/?apikey=d148e2fd&i=${peli.imdbID}`
+                        id: peli.imdbID
                     }))
                     console.log(this.peliculas)
                 }
             })
 
-
+            axios.get("https://www.omdbapi.com/?apikey=d148e2fd&s=star+wars&type=series")
+            .then(response=>{
+                this.info=response.data;
+                if(this.info&&this.info.Search){
+                    this.series= this.info.Search.map(serie=>({
+                        title: serie.Title,
+                        releaseYear: serie.Year,
+                        type: serie.Type,
+                        poster: serie.Poster,
+                        id: serie.imdbID
+                    }))
+                    console.log(this.series)
+                }
+            })
         }
     }
 
@@ -74,5 +99,6 @@
       flex-wrap: wrap;
       justify-content: center;
       height: auto;
+      margin-bottom: 2em;
     }
     </style>
