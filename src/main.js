@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from "vue-router"
 import HomePagina from "./components/HomePagina.vue"
 import LoginPagina from "./components/LoginPagina.vue"
 import PeliculaPagina from "./components/PeliculaPagina.vue"
+import PeliculasPagina from "./components/PeliculasPagina.vue"
 import SeriesPagina from "./components/SeriesPagina.vue"
 
 const router = createRouter({
@@ -13,6 +14,7 @@ const router = createRouter({
       { path: '/', component: HomePagina },
       { path: '/pelicula/:id', name:'Detall', component: PeliculaPagina, props:true },
       { path: '/series', component: SeriesPagina },
+      { path: '/peliculas', component: PeliculasPagina },
       { path: '/login', component: LoginPagina},
     ]
 });
