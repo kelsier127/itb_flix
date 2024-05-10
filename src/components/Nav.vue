@@ -34,8 +34,7 @@
     margin: 0 10px;
   }
   a {
-    color: #42b983;
+    color: black;
   }
   </style>
   
->>>>>>> c2eeac2 (imagenes funcionales y tal)

@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #6a11cb, #2575fc, #ff6ec4);
+        background-size: 200% 200%;
+        animation: gradientAnimation 10s ease infinite;
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+    </style>
   </head>
   <body>
     <noscript>
