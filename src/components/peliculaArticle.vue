@@ -1,6 +1,6 @@
 <template>
 
-    <article class="articleTal">
+    <article class="peliArticleTal">
         <b><router-link :to="{ name: 'Detall', params: { id }}">{{ titol }}</router-link></b><br>
         <img class="posterPelicula" :src=imgUrl >
         <p>Release Date: <b>{{ releaseYear }}</b></p><br>
@@ -32,8 +32,9 @@
 
 
 <style>
-.articleTal{
-    width: auto 30%;
+.peliArticleTal{
+    padding-top: 2em;
+    width: 48%;
     border: 1px solid black;
     background-color: rgba(245, 245, 245, 0.293);
 }

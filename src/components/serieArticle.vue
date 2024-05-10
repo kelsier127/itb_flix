@@ -1,6 +1,6 @@
 <template>
 
-    <article class="articleTal">
+    <article class="serieArticleTal">
         <b><router-link :to="{ name: 'Detall', params: { id }}">{{ titol }}</router-link></b><br>
         <img class="posterPelicula" :src=imgUrl >
         <p>Release Date: <b>{{ releaseYear }}</b></p><br>
@@ -25,44 +25,18 @@
                 peli:[]
             }
             
-        }/*,mounted(){
-            axios.get(`http://www.omdbapi.com/?apikey=d148e2fd&i=${this.id}`)
-            .then(response=>{
-                this.info=response.data;
-                if(this.info&&this.info.Search){
-                    this.peli = this.info.Search.map(pelicula=>({
-                        title: pelicula.Title,
-                        releaseYear: pelicula.Year,
-                        ageRate: pelicula.Rated,
-                        releaseDate: pelicula.Released,
-                        runTime: pelicula.Runtime,
-                        genres: pelicula.Genre,
-                        director: pelicula.Director,
-                        writers: pelicula.Writer,
-                        actors: pelicula.Actors,
-                        plot: pelicula.Plot,
-                        awards:pelicula.Awards,
-                        poster:pelicula.Poster,
-                        metaRating:pelicula.Metascore,
-                        imdbRating: pelicula.imdbRating,
-                        boxOffice:pelicula.BoxOffice
-
-                        
-                    }))
-                }
-                
-            })
-            console.log(this.peli)
-        }*/
+        }
     }
     
 </script>
 
 
 <style>
-.articleTal{
-    width: 49%;
+.serieArticleTal{
+    width: 20%;
     border: 1px solid black;
+    background-color: rgba(245, 245, 245, 0.293);
+
 }
 .posterPelicula{
     width: 140px;

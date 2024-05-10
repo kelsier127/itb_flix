@@ -4,7 +4,7 @@
     
     <NavComponent/>
 
-    <div class="divPeliculas">
+    <div class="divContainer">
         <peliculaArticle v-for="(peli,index) in peliculas"
         :key="index"
         :imgUrl="peli.poster"
@@ -14,7 +14,7 @@
         />
     </div>
 
-    <div class="divPeliculas">
+    <div class="divContainer">
         <serieArticle v-for="(serie,index) in series"
         :key="index"
         :imgUrl="serie.poster"
@@ -93,10 +93,11 @@
     margin-top: 60px;
     }
     
-    .divPeliculas{
-      border: 1px solid black;
+    .divContainer{
       display: flex;
       flex-wrap: wrap;
+      gap: 4rem;
+      padding: 2rem;
       justify-content: center;
       height: auto;
       margin-bottom: 2em;

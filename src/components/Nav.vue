@@ -36,5 +36,8 @@
   a {
     color: black;
   }
+  nav{
+    margin-bottom: 3em;
+  }
   </style>
   
