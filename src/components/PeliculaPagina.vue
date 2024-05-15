@@ -105,6 +105,8 @@
 }
 
 .poster{
+  height: auto;
+  width: auto;
   box-shadow: 0 0 5px 5px rgba(53, 53, 53, 0.442);
   margin: 3%;
   border-radius: 10px;

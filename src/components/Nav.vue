@@ -1,11 +1,10 @@
   <template>
     <div class="hello">
-      <h1>ITB FLIX</h1>
+      <h1>STAR FLIX</h1>
 
       <nav>
   
-        <router-link to="/">Index</router-link> 
-        <router-link to='/peliculas'>Peliculas</router-link> 
+        <router-link to='/'>Peliculas</router-link> 
         <router-link to='/series'>Series</router-link> 
         <router-link to='/login'>Form</router-link>
   

@@ -33,7 +33,9 @@
 
 <style>
 .serieArticleTal{
-    width: 20%;
+    padding-top: 2em;
+    height: 300px;
+    width: 350px;
     border: 1px solid black;
     background-color: rgba(245, 245, 245, 0.293);
 

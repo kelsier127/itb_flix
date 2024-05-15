@@ -34,7 +34,8 @@
 <style>
 .peliArticleTal{
     padding-top: 2em;
-    width: 48%;
+    height: 300px;
+    width: 350px;
     border: 1px solid black;
     background-color: rgba(245, 245, 245, 0.293);
 }
