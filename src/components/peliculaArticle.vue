@@ -35,9 +35,12 @@
 .peliArticleTal{
     padding-top: 2em;
     height: 300px;
-    width: 350px;
+    width: 320px;
     border: 1px solid black;
     background-color: rgba(245, 245, 245, 0.293);
+    overflow-y:hidden;
+        border-radius: 10px;
+
 }
 .posterPelicula{
     width: 140px;
